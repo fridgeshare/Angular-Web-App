@@ -1,15 +1,15 @@
 {
-  "index": "/index.html",
+  "index": "/client/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "resources": {
         "files": [
-          "/favicon.ico",
-          "/index.html",
-          "/*.css",
-          "/*.js"
+          "/client/favicon.ico",
+          "/client/index.html",
+          "/client/*.css",
+          "/client/*.js"
         ]
       }
     }, {
@@ -18,7 +18,7 @@
       "updateMode": "prefetch",
       "resources": {
         "files": [
-          "/assets/**"
+          "/client/assets/**"
         ]
       }
     }

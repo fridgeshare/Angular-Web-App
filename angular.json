@@ -5,7 +5,7 @@
   "projects": {
     "FridgeShare": {
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "src/client",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -14,17 +14,18 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/FridgeShare",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "index": "src/client/index.html",
+            "main": "src/client/main.ts",
+            "polyfills": "src/client/polyfills.ts",
+            "tsConfig": "src/client/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/manifest.json"
+              "src/client/favicon.ico",
+              "src/client/assets",
+              "src/client/manifest.json"
             ],
             "styles": [
-              "src/styles.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/client/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/font-awesome/css/font-awesome.min.css"
             ],
@@ -71,18 +72,19 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
-            "karmaConfig": "src/karma.conf.js",
+            "main": "src/client/test.ts",
+            "polyfills": "src/client/polyfills.ts",
+            "tsConfig": "src/client/tsconfig.spec.json",
+            "karmaConfig": "src/client/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/client/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/manifest.json"
+              "src/client/favicon.ico",
+              "src/client/assets",
+              "src/client/manifest.json"
             ]
           }
         },

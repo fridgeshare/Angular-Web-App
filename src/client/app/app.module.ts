@@ -5,12 +5,13 @@ import { StoreModule } from "./store/store.module";
 import { CouponsModule } from "./coupons/coupons.module";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule, StoreModule, CouponsModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    BrowserModule, StoreModule, CouponsModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
